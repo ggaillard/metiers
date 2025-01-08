@@ -23,122 +23,122 @@ job = {
         },
         "Technicien(ne) systèmes et réseaux": {
             "Compétences techniques": [
-                "Aimer configurer des équipements réseau",
-                "Savoir diagnostiquer les dysfonctionnements systèmes",
+                "Configurer des équipements réseau",
+                "Diagnostiquer les dysfonctionnements systèmes",
                 "Avoir un esprit logique et méthodique",
-                "Savoir documenter les procédures techniques",
-                "Être à l'aise avec le travail sur le terrain",
-                "Savoir gérer les priorités des interventions",
-                "Aimer optimiser les performances des systèmes"
+                "Documenter les procédures techniques",
+                "Travailler sur le terrain",
+                "Gérer les priorités des interventions",
+                "Optimiser les performances des systèmes"
             ],
             "Compétences comportementales": [
-                "Être rigoureux(se) dans la gestion des infrastructures",
-                "Aimer travailler en équipe",
-                "Être curieux(se) des nouvelles technologies"
+                "Rigueur dans la gestion des infrastructures",
+                "Travail en équipe",
+                "Curiosité pour les nouvelles technologies"
             ]
         },
         "Administrateur(trice) systèmes et réseaux": {
             "Compétences techniques": [
-                "Aimer assurer la disponibilité des systèmes",
-                "Avoir une bonne maîtrise des environnements serveurs",
-                "Savoir sécuriser les infrastructures informatiques",
-                "Être réactif(ve) face aux incidents critiques",
-                "Être méthodique dans la gestion des mises à jour"
+                "Assurer la disponibilité des systèmes",
+                "Maîtriser les environnements serveurs",
+                "Sécuriser les infrastructures informatiques",
+                "Réactivité face aux incidents critiques",
+                "Méthodique dans la gestion des mises à jour"
             ],
             "Compétences comportementales": [
-                "Être responsable et autonome",
-                "Savoir travailler en équipe sur des projets complexes",
-                "Aimer documenter les processus et configurations",
-                "Être curieux(se) des nouvelles tendances en IT",
-                "Avoir un esprit analytique pour résoudre les problèmes"
+                "Responsable et autonome",
+                "Travail en équipe sur des projets complexes",
+                "Documenter les processus et configurations",
+                "Curiosité pour les nouvelles tendances en IT",
+                "Esprit analytique pour résoudre les problèmes"
             ]
         }
     },
     "Développement et programmation": {
         "Développeur(se) d'applications": {
             "Compétences techniques": [
-                "Être rigoureux(se) dans l'écriture du code",
-                "Savoir analyser les besoins des utilisateurs",
-                "Savoir tester et corriger les bugs efficacement",
-                "Être organisé(e) dans la gestion des projets"
+                "Rigueur dans l'écriture du code",
+                "Analyser les besoins des utilisateurs",
+                "Tester et corriger les bugs efficacement",
+                "Organisation dans la gestion des projets"
             ],
             "Compétences comportementales": [
-                "Aimer créer des logiciels innovants",
-                "Être curieux(se) des nouvelles technologies",
-                "Aimer résoudre des problèmes complexes",
-                "Savoir travailler en équipe avec d'autres développeurs",
-                "Avoir un esprit créatif pour proposer des solutions",
-                "Être patient(e) face aux défis techniques"
+                "Créer des logiciels innovants",
+                "Curiosité pour les nouvelles technologies",
+                "Résoudre des problèmes complexes",
+                "Travail en équipe avec d'autres développeurs",
+                "Esprit créatif pour proposer des solutions",
+                "Patience face aux défis techniques"
             ]
         },
         "Développeur(se) web": {
             "Compétences techniques": [
-                "Avoir une bonne maîtrise des langages front-end",
-                "Savoir optimiser les performances des sites",
-                "Savoir travailler en équipe avec des designers"
+                "Maîtriser les langages front-end",
+                "Optimiser les performances des sites",
+                "Travailler en équipe avec des designers"
             ],
             "Compétences comportementales": [
-                "Aimer créer des interfaces utilisateur attrayantes",
-                "Être curieux(se) des tendances web",
-                "Aimer travailler sur des projets interactifs",
-                "Être rigoureux(se) dans le respect des standards web",
-                "Avoir un bon sens esthétique",
-                "Être patient(e) dans la résolution des problèmes",
-                "Aimer apprendre de nouveaux outils"
+                "Créer des interfaces utilisateur attrayantes",
+                "Curiosité pour les tendances web",
+                "Travailler sur des projets interactifs",
+                "Rigueur dans le respect des standards web",
+                "Bon sens esthétique",
+                "Patience dans la résolution des problèmes",
+                "Apprendre de nouveaux outils"
             ]
         },
         "Développeur(se) mobile": {
             "Compétences techniques": [
                 "Maîtriser les langages de programmation mobile (Swift, Kotlin, etc.)",
-                "Savoir optimiser les performances des applications mobiles",
-                "Être à l'aise avec les environnements de développement mobile"
+                "Optimiser les performances des applications mobiles",
+                "À l'aise avec les environnements de développement mobile"
             ],
             "Compétences comportementales": [
-                "Aimer créer des applications innovantes",
-                "Être curieux(se) des nouvelles tendances mobiles",
-                "Aimer résoudre des problèmes complexes",
-                "Savoir travailler en équipe avec des designers et développeurs"
+                "Créer des applications innovantes",
+                "Curiosité pour les nouvelles tendances mobiles",
+                "Résoudre des problèmes complexes",
+                "Travail en équipe avec des designers et développeurs"
             ]
         },
         "Intégrateur(trice) web": {
             "Compétences techniques": [
                 "Maîtriser les langages de balisage et de style (HTML, CSS)",
-                "Savoir intégrer des éléments graphiques et techniques",
-                "Être à l'aise avec les outils de gestion de contenu"
+                "Intégrer des éléments graphiques et techniques",
+                "À l'aise avec les outils de gestion de contenu"
             ],
             "Compétences comportementales": [
-                "Aimer assembler des éléments pour créer des sites web",
-                "Être rigoureux(se) dans le respect des standards web",
-                "Aimer travailler en équipe avec des designers et développeurs"
+                "Assembler des éléments pour créer des sites web",
+                "Rigueur dans le respect des standards web",
+                "Travail en équipe avec des designers et développeurs"
             ]
         },
         "Analyste programmeur(se)": {
             "Compétences techniques": [
-                "Savoir analyser les besoins des utilisateurs",
+                "Analyser les besoins des utilisateurs",
                 "Maîtriser les langages de programmation",
-                "Savoir tester et corriger les bugs"
+                "Tester et corriger les bugs"
             ],
             "Compétences comportementales": [
-                "Aimer résoudre des problèmes complexes",
-                "Être curieux(se) des nouvelles technologies",
-                "Savoir travailler en équipe"
+                "Résoudre des problèmes complexes",
+                "Curiosité pour les nouvelles technologies",
+                "Travail en équipe"
             ]
         },
-           
         "Spécialiste en traitement du langage naturel (NLP)": {
             "Compétences techniques": [
                 "Maîtriser les techniques de traitement du langage naturel",
-                "Savoir développer des modèles de NLP",
-                "Être à l'aise avec les outils de NLP"
+                "Développer des modèles de NLP",
+                "À l'aise avec les outils de NLP"
             ],
             "Compétences comportementales": [
-                "Aimer résoudre des problèmes complexes",
-                "Être curieux(se) des nouvelles technologies",
-                "Savoir travailler en équipe"
+                "Résoudre des problèmes complexes",
+                "Curiosité pour les nouvelles technologies",
+                "Travail en équipe"
             ]
         }
     },
     "Infrastructure et gestion des données": {
+        "Architecte de données": {
         "Architecte de données": {
             "Compétences techniques": [
                 "Concevoir et optimiser la structure des données",
@@ -164,7 +164,7 @@ job = {
             ]
         }
     },
-        "Ingénieur(e) en machine learning": {
+    "Ingénieur(e) en machine learning": {
             "Compétences techniques": [
                 "Maîtriser les algorithmes d'apprentissage automatique",
                 "Savoir traiter et analyser de grandes quantités de données",
@@ -222,7 +222,7 @@ job = {
                 "Aimer résoudre des problèmes complexes",
                 "Être curieux(se) des nouvelles technologies",
                 "Savoir travailler en équipe"
-           ]
+            ]
         }
     },
     "Sécurité informatique et conformité": {
