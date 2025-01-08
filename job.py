@@ -1,3 +1,4 @@
+# Dictionnaire des métiers et attitudes
 jobs = {
     "Support et administration IT": {
         "Technicien(ne) support informatique": [
