@@ -1,5 +1,5 @@
 # Dictionnaire des métiers et attitudes
-metiers_et_attitudes = {
+job = {
     "Support et administration IT": {
         "Technicien(ne) support informatique": {
             "Compétences techniques": [
