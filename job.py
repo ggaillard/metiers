@@ -139,7 +139,6 @@ job = {
     },
     "Infrastructure et gestion des données": {
         "Architecte de données": {
-        "Architecte de données": {
             "Compétences techniques": [
                 "Concevoir et optimiser la structure des données",
                 "Savoir gérer les bases de données",
