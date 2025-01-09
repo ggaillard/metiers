@@ -1,7 +1,5 @@
 import streamlit as st
 from job import jobs  # Importer le dictionnaire jobs depuis job.py
-
-# Interface utilisateur Streamlit
 st.title("Découvrez votre métier idéal en IT 🚀")
 st.write("Répondez à toutes les questions pour découvrir le métier qui correspond le mieux à vos attitudes !")
 
