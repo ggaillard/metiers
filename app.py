@@ -1,84 +1,89 @@
 import streamlit as st
 from job import jobs
 
-# Configuration de la navigation entre les pages
+
+# Fonction pour obtenir les questions et rôles
+def get_next_question():
+    for category, roles in jobs.items():
+        for role, questions in roles.items():
+            for question in questions:
+                yield question, role
+
+
+# Initialisation de l'état de session
+if 'current_question' not in st.session_state:
+    st.session_state.current_question = 0
+if 'responses' not in st.session_state:
+    st.session_state.responses = []
+
+
+# Fonction principale pour gérer les pages
 def main():
-    st.sidebar.title("Navigation")
-    page = st.sidebar.radio("Aller à", ["Accueil", "Questionnaire", "Résultats"])
+    st.title("Quiz : Quel métier est fait pour vous ?")
+
+    # Navigation entre les pages
+    page = st.sidebar.selectbox("Choisissez une page :", ["Accueil", "Questionnaire", "Résultats"])
 
     if page == "Accueil":
-        page_home()
+        page_accueil()
     elif page == "Questionnaire":
         page_questionnaire()
     elif page == "Résultats":
-        page_results()
+        page_resultats()
+
 
 # Page d'accueil
-def page_home():
-    st.title("Bienvenue dans le Questionnaire de Métier")
-    st.write("""
-        Ce questionnaire vous aide à découvrir le métier qui correspond le mieux à vos intérêts.
-        Cliquez sur **Questionnaire** dans le menu de navigation pour commencer.
-    """)
+def page_accueil():
+    st.header("Bienvenue sur l'application de découverte des métiers !")
+    st.write("Répondez à quelques questions simples pour découvrir quel métier pourrait vous correspondre.")
+    st.write("Cliquez sur **Questionnaire** dans la barre latérale pour commencer.")
 
-# Page du questionnaire
+
+# Page questionnaire
 def page_questionnaire():
-    # Initialisation de l'état de session
-    if "current_question" not in st.session_state:
-        st.session_state.current_question = 0
-    if "responses" not in st.session_state:
-        st.session_state.responses = []
+    st.header("Répondez aux questions suivantes")
+    questions = list(get_next_question())
 
-    # Génération de toutes les questions
-    def get_all_questions():
-        for category, roles in jobs.items():
-            for role, questions in roles.items():
-                for question in questions:
-                    yield question, role
-
-    questions = list(get_all_questions())
-
-    # Affichage de la question actuelle
+    # Vérification des index pour éviter les dépassements
     if st.session_state.current_question < len(questions):
         question, role = questions[st.session_state.current_question]
-        st.subheader(f"Question {st.session_state.current_question + 1}/{len(questions)}")
-        response = st.radio(f"{question} ({role})", ("Oui", "Non"))
+        response = st.radio(question, ["Oui", "Non"])
 
+        # Si l'utilisateur appuie sur "Suivant"
         if st.button("Suivant"):
-            # Sauvegarder la réponse
             st.session_state.responses.append((question, response, role))
             st.session_state.current_question += 1
-            st.experimental_rerun()
-    else:
-        st.write("Vous avez répondu à toutes les questions.")
-        if st.button("Voir les résultats"):
-            st.experimental_rerun()
 
-# Page des résultats
-def page_results():
-    if "responses" not in st.session_state or not st.session_state.responses:
-        st.write("Vous n'avez pas encore répondu au questionnaire. Rendez-vous sur la page **Questionnaire** pour commencer.")
+            # Recharge la page si d'autres questions restent
+            if st.session_state.current_question < len(questions):
+                st.experimental_rerun()
+    else:
+        st.write("Vous avez terminé le questionnaire. Rendez-vous dans l'onglet **Résultats** pour découvrir votre métier idéal.")
+
+
+# Page résultats
+def page_resultats():
+    st.header("Résultats du quiz")
+
+    if not st.session_state.responses:
+        st.write("Vous n'avez pas encore répondu aux questions. Allez dans l'onglet **Questionnaire** pour commencer.")
         return
 
-    # Calcul des scores pour chaque rôle
+    # Calcul des scores pour chaque métier
     role_scores = {}
-    for _, response, role in st.session_state.responses:
+    for question, response, role in st.session_state.responses:
         if response == "Oui":
             role_scores[role] = role_scores.get(role, 0) + 1
 
     # Affichage des résultats
     if role_scores:
         best_role = max(role_scores, key=role_scores.get)
-        total_questions = sum([len(questions) for roles in jobs.values() for questions in roles.values()])
-        score = role_scores[best_role]
-        st.success(f"Votre métier idéal est : **{best_role}**")
-        st.write(generate_job_mapping(score, total_questions))
-
-        # Visualisation des scores
-        st.subheader("Suggestions de métiers")
-        st.bar_chart(role_scores)
+        st.write(f"Votre métier idéal est : **{best_role}**")
+        st.write("Détail des scores par métier :")
+        for role, score in role_scores.items():
+            st.write(f"- **{role}** : {score} points")
     else:
-        st.warning("Aucun métier ne correspond à vos réponses. Essayez de répondre à nouveau.")
+        st.write("Aucun métier ne correspond à vos réponses.")
 
     # Bouton pour recommencer
     if st.button("Recommencer"):
@@ -86,10 +91,6 @@ def page_results():
         st.session_state.responses = []
         st.experimental_rerun()
 
-# Fonction pour calculer le score de correspondance
-def generate_job_mapping(score, total_questions):
-    percentage = int((score / total_questions) * 100)
-    return f"Votre correspondance avec le métier est de {percentage}%."
 
 # Exécution de l'application
 if __name__ == "__main__":
